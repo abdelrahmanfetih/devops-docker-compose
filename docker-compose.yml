@@ -5,6 +5,9 @@ services:
     build: .
     depends_on:
       - redis
+    env_file:
+      - .env
 
   redis:
     image: redis:7-alpine
+
